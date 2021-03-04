@@ -13,7 +13,9 @@ Gem::Specification.new do |s|
   s.description = %q(PgSearch builds Active Record named scopes that take advantage of PostgreSQL's full text search)
   s.licenses    = ["MIT"]
 
-  s.files         = `git ls-files`.split("\n")
+  files           = `git ls-files`.split("\n")
+  files.delete("pg_search-1.0.5.1.gem")
+  s.files         = files
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
